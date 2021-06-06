@@ -13,6 +13,10 @@
 		B5161E4E266CD2DD00BCD68C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5161E4C266CD2DD00BCD68C /* Main.storyboard */; };
 		B5161E50266CD2E000BCD68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5161E4F266CD2E000BCD68C /* Assets.xcassets */; };
 		B5161E53266CD2E000BCD68C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5161E51266CD2E000BCD68C /* LaunchScreen.storyboard */; };
+		B5161E60266CD77F00BCD68C /* ViewController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5161E5F266CD77F00BCD68C /* ViewController+AlertController.swift */; };
+		B5161E62266CDAD100BCD68C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5161E61266CDAD100BCD68C /* NetworkManager.swift */; };
+		B5161E65266CDEF800BCD68C /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5161E64266CDEF800BCD68C /* CurrentWeatherData.swift */; };
+		B5161E68266CDF9B00BCD68C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5161E67266CDF9B00BCD68C /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		B5161E4F266CD2E000BCD68C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5161E52266CD2E000BCD68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5161E54266CD2E000BCD68C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5161E5F266CD77F00BCD68C /* ViewController+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+AlertController.swift"; sourceTree = "<group>"; };
+		B5161E61266CDAD100BCD68C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B5161E64266CDEF800BCD68C /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
+		B5161E67266CDF9B00BCD68C /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,11 @@
 		B5161E3A266CD2DD00BCD68C = {
 			isa = PBXGroup;
 			children = (
+				B5161E5E266CD33600BCD68C /* View Controller */,
+				B5161E5D266CD33200BCD68C /* View */,
+				B5161E5C266CD32400BCD68C /* Supporting files */,
+				B5161E5B266CD31D00BCD68C /* Models */,
+				B5161E5A266CD31600BCD68C /* Extensions */,
 				B5161E45266CD2DD00BCD68C /* WeatherApp */,
 				B5161E44266CD2DD00BCD68C /* Products */,
 			);
@@ -56,15 +69,54 @@
 		B5161E45266CD2DD00BCD68C /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				B5161E46266CD2DD00BCD68C /* AppDelegate.swift */,
-				B5161E48266CD2DD00BCD68C /* SceneDelegate.swift */,
-				B5161E4A266CD2DD00BCD68C /* ViewController.swift */,
-				B5161E4C266CD2DD00BCD68C /* Main.storyboard */,
-				B5161E4F266CD2E000BCD68C /* Assets.xcassets */,
-				B5161E51266CD2E000BCD68C /* LaunchScreen.storyboard */,
-				B5161E54266CD2E000BCD68C /* Info.plist */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		B5161E5A266CD31600BCD68C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5161E5F266CD77F00BCD68C /* ViewController+AlertController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B5161E5B266CD31D00BCD68C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5161E61266CDAD100BCD68C /* NetworkManager.swift */,
+				B5161E64266CDEF800BCD68C /* CurrentWeatherData.swift */,
+				B5161E67266CDF9B00BCD68C /* CurrentWeather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B5161E5C266CD32400BCD68C /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				B5161E54266CD2E000BCD68C /* Info.plist */,
+				B5161E46266CD2DD00BCD68C /* AppDelegate.swift */,
+				B5161E48266CD2DD00BCD68C /* SceneDelegate.swift */,
+				B5161E4F266CD2E000BCD68C /* Assets.xcassets */,
+				B5161E51266CD2E000BCD68C /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		B5161E5D266CD33200BCD68C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5161E4C266CD2DD00BCD68C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5161E5E266CD33600BCD68C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5161E4A266CD2DD00BCD68C /* ViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +190,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5161E4B266CD2DD00BCD68C /* ViewController.swift in Sources */,
+				B5161E60266CD77F00BCD68C /* ViewController+AlertController.swift in Sources */,
+				B5161E65266CDEF800BCD68C /* CurrentWeatherData.swift in Sources */,
+				B5161E68266CDF9B00BCD68C /* CurrentWeather.swift in Sources */,
+				B5161E62266CDAD100BCD68C /* NetworkManager.swift in Sources */,
 				B5161E47266CD2DD00BCD68C /* AppDelegate.swift in Sources */,
 				B5161E49266CD2DD00BCD68C /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M22VP3W56;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = "Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M22VP3W56;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = "Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
