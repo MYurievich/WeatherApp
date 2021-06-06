@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct NetworkManager {
+class NetworkManager {
     
     var onCompletion: ((CurrentWeather) -> Void)?
     
     func fetchCurrentWeather(cityName: String) {
-    let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=de73a530cdd6fc71b468b36dbf78d796"
+    let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=de73a530cdd6fc71b468b36dbf78d796&units=metric"
         guard let url = URL(string: urlString) else { return }
     let session = URLSession(configuration: .default)
         let data = session.dataTask(with: url) { data, response, error in
@@ -29,7 +29,7 @@ struct NetworkManager {
         let decoder = JSONDecoder()
         do {
         let currentWeatherData = try decoder.decode(CurrentWeatherData.self, from: data)
-        guard let currentWeather = CurrentWeather(cityName: currentWeatherData.name, temp: currentWeatherData.main.temp) else { return nil}
+        guard let currentWeather = CurrentWeather(currentWeather: currentWeatherData) else { return nil}
         return currentWeather
         } catch let error as NSError {
             print(error.localizedDescription)

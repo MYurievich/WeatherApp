@@ -17,13 +17,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkManager.onCompletion = { currentWeather in
+        networkManager.onCompletion = { [unowned self] currentWeather in
             self.presentCurrentWeather(currentWeather: currentWeather)
         }
     }
 
     @IBAction func searchButton(_ sender: UIButton) {
-        presentAlertCotroller(title: "Search city", message: nil, style: .alert) { cityName in
+        presentAlertCotroller(title: "Search city", message: nil, style: .alert) { [weak self] cityName in
+            guard let self = self else { return }
             self.networkManager.fetchCurrentWeather(cityName: cityName)
         }
     }
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             self.cityLabel.text = currentWeather.cityName
             self.temperatureLabel.text = currentWeather.tempString
+            self.iconView.image = UIImage(systemName: currentWeather.iconWeather)
         }
     }
 }
