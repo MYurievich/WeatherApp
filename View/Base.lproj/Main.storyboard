@@ -20,37 +20,37 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="L4f-gD-PHE">
                                 <rect key="frame" x="20" y="47.000000000000014" width="350" height="209.33333333333337"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.sun.rain.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4u4-7t-ZLC">
-                                        <rect key="frame" x="56.333333333333314" y="-2.6666666666666714" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nosign" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4u4-7t-ZLC">
+                                        <rect key="frame" x="56.333333333333329" y="1" width="237.33333333333337" height="121.33333333333334"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="237.5" id="Ihx-D7-RiA"/>
                                             <constraint firstAttribute="height" constant="122.5" id="d9H-bL-YSd"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saint Petersburg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-Gt-z33">
-                                        <rect key="frame" x="82.666666666666686" y="134.66666666666666" width="185" height="31.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-Gt-z33">
+                                        <rect key="frame" x="168.66666666666666" y="134.66666666666666" width="13" height="31.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="MD0-1e-yyx">
-                                        <rect key="frame" x="130.66666666666666" y="178" width="89" height="31.333333333333343"/>
+                                        <rect key="frame" x="139.33333333333334" y="178" width="71.333333333333343" height="31.333333333333343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smu-TW-QTJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="30.666666666666668" height="31.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smu-TW-QTJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="13" height="31.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cº" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-6U-XPX">
-                                                <rect key="frame" x="33.666666666666686" y="0.0" width="28" height="31.333333333333332"/>
+                                                <rect key="frame" x="16" y="0.0" width="28" height="31.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuM-UT-srg">
-                                                <rect key="frame" x="64.666666666666686" y="0.0" width="24.333333333333329" height="31.333333333333332"/>
+                                                <rect key="frame" x="47" y="0.0" width="24.333333333333329" height="31.333333333333332"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
                                                 </state>
@@ -83,8 +83,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud.sun.rain.fill" catalog="system" width="128" height="125"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="nosign" catalog="system" width="128" height="121"/>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

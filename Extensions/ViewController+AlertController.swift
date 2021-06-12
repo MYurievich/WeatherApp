@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 extension ViewController {
     func presentAlertCotroller(title: String?, message: String?, style: UIAlertController.Style, completionHandler: @escaping (String) -> Void) {
@@ -30,3 +31,14 @@ extension ViewController {
     }
 }
 
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        networkManager.fetchCurrentWeather(requestType: .coordinate(latitude: latitude, longitude: longitude))
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
+}

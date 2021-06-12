@@ -53,7 +53,6 @@
 				B5161E5C266CD32400BCD68C /* Supporting files */,
 				B5161E5B266CD31D00BCD68C /* Models */,
 				B5161E5A266CD31600BCD68C /* Extensions */,
-				B5161E45266CD2DD00BCD68C /* WeatherApp */,
 				B5161E44266CD2DD00BCD68C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,13 +63,6 @@
 				B5161E43266CD2DD00BCD68C /* WeatherApp.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B5161E45266CD2DD00BCD68C /* WeatherApp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WeatherApp;
 			sourceTree = "<group>";
 		};
 		B5161E5A266CD31600BCD68C /* Extensions */ = {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     
@@ -14,18 +15,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     
     var networkManager = NetworkManager()
+    lazy var locationManager: CLLocationManager = {
+        let lm = CLLocationManager()
+        lm.delegate = self
+        lm.desiredAccuracy = kCLLocationAccuracyKilometer
+        lm.requestWhenInUseAuthorization()
+        return lm
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         networkManager.onCompletion = { [unowned self] currentWeather in
             self.presentCurrentWeather(currentWeather: currentWeather)
         }
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestLocation()
+        }
     }
 
     @IBAction func searchButton(_ sender: UIButton) {
         presentAlertCotroller(title: "Search city", message: nil, style: .alert) { [weak self] cityName in
             guard let self = self else { return }
-            self.networkManager.fetchCurrentWeather(cityName: cityName)
+            self.networkManager.fetchCurrentWeather(requestType: .cityName(city: cityName))
         }
     }
     
